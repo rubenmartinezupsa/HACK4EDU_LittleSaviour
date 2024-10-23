@@ -1,16 +1,4 @@
-# little_savior
+# Little Saviour
 
-Made for Hack4Edu 2024. App that teaches kids about first aid
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Made for HACK4EDU 2024. App that teaches kids about first aid.
+![h4e_img-destacada-sticker-1140x640@2](https://github.com/user-attachments/assets/76b726a1-6471-4fb1-ad40-6f6b266d6d2e)
