@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Little Saviors',
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromRGBO(254,	247,	215, 1),
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(217, 56, 72, 1)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(217, 56, 72, 1)),
         useMaterial3: true,
       ),
       home: const SplashView(),

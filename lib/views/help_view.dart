@@ -10,13 +10,9 @@ class HelpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    _makingPhoneCall() async {
-      var url = Uri.parse("tel:698138022");
-      if (await canLaunchUrl(url)) {
-        await launchUrl(url);
-      } else {
-        throw 'Could not launch $url';
-      }
+    makingPhoneCall() async {
+      var url = Uri.parse("tel:112");
+      await launchUrl(url);
     }
 
     return Scaffold(
@@ -30,7 +26,7 @@ class HelpView extends StatelessWidget {
         backgroundColor: AppColors.primaryColor,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => _makingPhoneCall(),
+        onPressed: () => makingPhoneCall(),
         backgroundColor: AppColors.primaryColor,
         child: const Icon(
           Icons.call,

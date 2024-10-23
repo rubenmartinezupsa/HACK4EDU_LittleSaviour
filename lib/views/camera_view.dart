@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:little_savior/utils/strings.dart';
-import 'package:tflite_v2/tflite_v2.dart';
 
 
 import '../utils/colors.dart';
@@ -21,7 +20,7 @@ class _CameraViewState extends State<CameraView> {
 
   @override
   void initState() {
-    loadModel();
+    //loadModel();
     super.initState();
   }
 
@@ -30,7 +29,7 @@ class _CameraViewState extends State<CameraView> {
     super.dispose();
   }
 
-  Future<void> loadModel() async {
+  /*Future<void> loadModel() async {
     await Tflite.loadModel(
         model: "assets/model.tflite",
         labels: "assets/labels.txt",
@@ -38,7 +37,7 @@ class _CameraViewState extends State<CameraView> {
         isAsset: true,
         useGpuDelegate: false
     );
-  }
+  }*/
 
   Future pickImageFromCamera() async {
     final returnedImage = await ImagePicker().pickImage(source: ImageSource.camera);

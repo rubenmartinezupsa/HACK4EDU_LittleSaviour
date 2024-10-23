@@ -56,7 +56,7 @@ class HomeView extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.03),
           const Center(
             child: Text(
               AppStrings.welcomeMessage,
