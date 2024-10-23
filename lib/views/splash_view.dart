@@ -1,14 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:little_savior/views/home_view.dart';
 
-class SplashView extends StatelessWidget {
+class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
+  @override
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+
+  void _navigateToHome() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const HomeView()),
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 5), () => _navigateToHome());
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Center(
-          child: Image.asset('assets/images/logo.jpeg'),
+          child: Image.asset('assets/images/logo.png'),
         ),
       ),
     );
