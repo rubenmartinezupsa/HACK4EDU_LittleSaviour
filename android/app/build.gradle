@@ -26,7 +26,12 @@ if (flutterVersionName == null) {
 android {
     namespace = "com.hackaton.little_savior"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "25.1.8937393"
+
+    aaptOptions {
+        noCompress 'tflite'
+        noCompress 'lite'
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

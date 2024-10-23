@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:little_savior/utils/text_styles.dart';
+
+import '../utils/colors.dart';
 
 class TableItemView extends StatelessWidget {
   final String imagePath;
@@ -14,23 +17,53 @@ class TableItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: Text(
+          title,
+          style: const TextStyle(color: Colors.white),
+        ),
+        centerTitle: true,
+        backgroundColor: AppColors.primaryColor,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image.asset(imagePath),
-          const SizedBox(height: 16.0),
-          Text(
-            title,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 8.0),
-          Text(description),
-        ],
+      body: Container(
+        padding: const EdgeInsets.all(16.0),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                height: 400,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(imagePath),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 16.0),
+            Text(
+              title,
+              style: AppTextStyles.normalTextStyle,
+            ),
+            const SizedBox(height: 8.0),
+            Text(
+              description,
+              style: AppTextStyles.answerTextStyle,
+            ),
+          ],
+        ),
       ),
     );
   }

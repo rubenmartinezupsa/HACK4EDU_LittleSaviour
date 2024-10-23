@@ -1,0 +1,12 @@
+0 Algodon sanitario
+1 Alcohol etilico
+2 Agua oxigenada
+3 Tiritas
+4 Cinta adhesiva medica
+5 Venda
+6 Pastillas
+7 Pomada
+8 Jeringuilla
+9 Jarabe
+10 Pinzas
+11 Termometro

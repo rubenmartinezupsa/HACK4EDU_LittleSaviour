@@ -1,4 +1,3 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:little_savior/utils/colors.dart';
 import 'package:little_savior/utils/strings.dart';
@@ -57,6 +56,7 @@ class HomeView extends StatelessWidget {
       ),
       body: Column(
         children: [
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           const Center(
             child: Text(
               AppStrings.welcomeMessage,
@@ -67,6 +67,7 @@ class HomeView extends StatelessWidget {
           SizedBox(height: MediaQuery.of(context).size.height * 0.2),
           Expanded(
             child: GridView.count(
+              padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
               crossAxisCount: 2,
               children: [
                 ButtonSelection(

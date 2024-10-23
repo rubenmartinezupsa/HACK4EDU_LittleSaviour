@@ -21,12 +21,9 @@ class InfoView extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(12),
-            child: Image.asset('assets/images/healthtable.jpg'),
-          ),
-          const SizedBox(height: 30,),
-          const Text(AppStrings.tableInfo, textAlign: TextAlign.center, style: AppTextStyles.normalTextStyle,)
+          Expanded(flex: 6, child: FirstAidGridView()),
+          Container(margin: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05), child: const Text(AppStrings.tableInfo, textAlign: TextAlign.justify, style: AppTextStyles.normalTextStyle,)),
+          Spacer()
         ],
       ),
     );
