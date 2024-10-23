@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:little_savior/utils/colors.dart';
 import 'package:little_savior/utils/strings.dart';
 import 'package:little_savior/utils/text_styles.dart';
 import 'package:little_savior/widgets/FirstAidGridView.dart';
@@ -16,7 +17,7 @@ class InfoView extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: AppColors.primaryColor,
       ),
       body: Column(
         children: [
@@ -24,7 +25,7 @@ class InfoView extends StatelessWidget {
             padding: const EdgeInsets.all(12),
             child: Image.asset('assets/images/healthtable.jpg'),
           ),
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
           const Text(AppStrings.tableInfo, textAlign: TextAlign.center, style: AppTextStyles.normalTextStyle,)
         ],
       ),

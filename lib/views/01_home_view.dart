@@ -1,8 +1,11 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:little_savior/utils/colors.dart';
 import 'package:little_savior/utils/strings.dart';
 import 'package:little_savior/utils/text_styles.dart';
 import 'package:little_savior/views/camera_view.dart';
+import 'package:little_savior/views/help_view.dart';
+import 'package:little_savior/views/how_view.dart';
 import 'package:little_savior/views/info_view.dart';
 
 import '../widgets/ButtonSelection.dart';
@@ -30,7 +33,7 @@ class HomeView extends StatelessWidget {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const CameraView(),
+          builder: (context) => const HowView(),
         ),
       );
     }
@@ -38,7 +41,7 @@ class HomeView extends StatelessWidget {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const CameraView(),
+          builder: (context) => const HelpView(),
         ),
       );
     }
@@ -50,7 +53,7 @@ class HomeView extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: AppColors.primaryColor,
       ),
       body: Column(
         children: [
@@ -61,9 +64,7 @@ class HomeView extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-
           SizedBox(height: MediaQuery.of(context).size.height * 0.2),
-
           Expanded(
             child: GridView.count(
               crossAxisCount: 2,
@@ -71,23 +72,23 @@ class HomeView extends StatelessWidget {
                 ButtonSelection(
                   text: 'Información',
                   icon: Icons.info,
-                  color: Colors.red,
+                  color: AppColors.primaryColor,
                   onPressed: () {
                     navigateToInfo();
                   },
                 ),
                 ButtonSelection(
-                  text: 'Que es?',
+                  text: '¿Que es?',
                   icon: Icons.camera_alt,
-                  color: Colors.red,
+                  color: AppColors.primaryColor,
                   onPressed: () {
                     navigateToCamera();
                   },
                 ),
                 ButtonSelection(
-                  text: 'Que hago?',
+                  text: '¿Que hago?',
                   icon: Icons.abc,
-                  color: Colors.red,
+                  color: AppColors.primaryColor,
                   onPressed: () {
                     navigateToHow();
                   },
@@ -95,7 +96,7 @@ class HomeView extends StatelessWidget {
                 ButtonSelection(
                   text: 'Pide ayuda',
                   icon: Icons.help,
-                  color: Colors.red,
+                  color: AppColors.primaryColor,
                   onPressed: () {
                     navigateToHelp();
                   },
