@@ -26,8 +26,12 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Center(
-          child: Image.asset('assets/images/logo.png'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/logo.png'),
+            const Center(child: CircularProgressIndicator(color: Colors.red,)),
+          ],
         ),
       ),
     );

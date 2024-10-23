@@ -7,6 +7,14 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void _navigateToInfo() {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const HomeView()),
+      );
+    }
+
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Little Saviour", style: TextStyle(color: Colors.white),),

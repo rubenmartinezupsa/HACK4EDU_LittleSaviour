@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:little_savior/views/home_view.dart';
 import 'package:little_savior/views/splash_view.dart';
 
 void main() {
